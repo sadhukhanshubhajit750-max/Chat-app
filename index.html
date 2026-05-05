@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== -->
+<!-- JOIN SCREEN -->
+<!-- ===================== -->
+<div id="join" class="center">
+  <h2>Join Chat</h2>
+  <input id="name" placeholder="Your name">
+  <input id="room" placeholder="Room code">
+  <button onclick="join()">Join</button>
+</div>
+
+
+<!-- ===================== -->
+<!-- CHAT SCREEN -->
+<!-- ===================== -->
+<div id="chat" class="chat" style="display:none;">
+
+  <div class="top-bar">
+    <span id="roomTitle"></span>
+  </div>
+
+  <!-- messages -->
+  <div id="messages" class="messages"></div>
+
+  <!-- typing indicator (IMPORTANT FIX) -->
+  <div id="typing" style="display:none; color:gray; font-size:13px; padding:5px;"></div>
+
+  <!-- input bar -->
+  <div class="input-bar">
+    <input id="msg" placeholder="Type a message...">
+    <button onclick="send()">➤</button>
+  </div>
+
+</div>
+
+
+<!-- ===================== -->
+<!-- FIREBASE -->
+<!-- ===================== -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+<!-- YOUR SCRIPT -->
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* JOIN SCREEN */
+.center {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  width: 220px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #22c55e;
+  color: white;
+  cursor: pointer;
+}
+
+/* CHAT SCREEN */
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #1e293b;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* MESSAGE AREA */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* MESSAGE BOX */
+.msg {
+  max-width: 70%;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+
+/* LEFT (others) */
+.msg.left {
+  background: #1e293b;
+  align-self: flex-start;
+}
+
+/* RIGHT (you) */
+.msg.right {
+  background: #22c55e;
+  color: white;
+  align-self: flex-end;
+}
+
+/* NAME */
+.name {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* INPUT BAR */
+.input-bar {
+  display: flex;
+  padding: 10px;
+  background: #020617;
+}
+
+.input-bar input {
+  flex: 1;
+  margin-right: 5px;
+}
