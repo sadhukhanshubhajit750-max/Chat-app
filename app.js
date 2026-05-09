@@ -114,7 +114,7 @@ function send() {
 
 
 // =====================
-// 🔹 Typing Detect (SAFE)
+// 🔹 Typing Detect (SAFE) & Enter to send
 // =====================
 window.addEventListener("load", () => {
 
@@ -134,6 +134,14 @@ window.addEventListener("load", () => {
       db.ref(`rooms/${room}/typing/${userName}`).set(false);
     }, 1000);
 
+  });
+
+  // "Enter" চাপলে মেসেজ সেন্ড হবে
+  input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      send();
+    }
   });
 
 });
